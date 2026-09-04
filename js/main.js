@@ -85,13 +85,14 @@
 
       // NOTA: GitHub Pages es estático y no procesa formularios.
       // En la Fase 4 se puede conectar a Supabase o a un servicio de correo.
-      // Por ahora abrimos el cliente de correo del usuario como fallback.
-      var asunto = encodeURIComponent("Contacto web — " + nombre);
-      var cuerpo = encodeURIComponent(mensaje + "\n\nDe: " + nombre + " (" + email + ")");
-      window.location.href =
-        "mailto:contacto@example.com?subject=" + asunto + "&body=" + cuerpo; // TODO: correo real
+      // Por ahora abrimos WhatsApp de la Coordinación General como fallback.
+      var CONTACTO_WHATSAPP = "50497221064"; // +504 9722-1064
+      var texto = encodeURIComponent(
+        "Hola, soy " + nombre + " (" + email + ").\n\n" + mensaje
+      );
+      window.open("https://wa.me/" + CONTACTO_WHATSAPP + "?text=" + texto, "_blank");
 
-      note.textContent = "¡Gracias! Se abrirá tu correo para enviar el mensaje.";
+      note.textContent = "¡Gracias! Se abrirá WhatsApp para enviar tu mensaje.";
       note.classList.add("ok");
       form.reset();
     });
