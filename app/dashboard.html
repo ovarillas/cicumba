@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Panel — Herederos de Cicumba</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body class="app-shell">
+  <header class="app-topbar">
+    <div class="app-topbar__brand">
+      <span class="brand__mark" aria-hidden="true">
+        <span class="dot dot--rojo"></span>
+        <span class="dot dot--verde"></span>
+        <span class="dot dot--azul"></span>
+        <span class="dot dot--amarillo"></span>
+      </span>
+      <strong>Cicumba</strong> · Panel
+    </div>
+    <div class="app-topbar__right">
+      <span id="userEmail" class="app-user"></span>
+      <button id="logoutBtn" class="btn btn--ghost btn--sm">Salir</button>
+    </div>
+  </header>
+
+  <main class="app-main container">
+    <h1 class="app-title">Panel de gestión</h1>
+    <p class="app-subtitle">Módulos por coordinación. Se irán habilitando en la Fase 4.</p>
+
+    <div class="modules">
+      <a class="module" href="#"><span class="module__band" style="--c:#c62828"></span><h3>Integrantes</h3><p>Registro y datos del grupo.</p></a>
+      <a class="module" href="#"><span class="module__band" style="--c:#2e7d32"></span><h3>Vestuario</h3><p>Trajes y asignaciones.</p></a>
+      <a class="module" href="#"><span class="module__band" style="--c:#1565c0"></span><h3>Utilería</h3><p>Inventario escénico.</p></a>
+      <a class="module" href="#"><span class="module__band" style="--c:#f9a825"></span><h3>Asistencia</h3><p>Ensayos y presentaciones.</p></a>
+      <a class="module" href="#"><span class="module__band" style="--c:#c62828"></span><h3>Eventos</h3><p>Agenda del grupo.</p></a>
+      <a class="module" href="#"><span class="module__band" style="--c:#2e7d32"></span><h3>Coordinaciones</h3><p>Roles y responsables.</p></a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

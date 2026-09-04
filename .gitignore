@@ -1,0 +1,16 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs y temporales
+*.log
+node_modules/
+
+# Credenciales locales (por si en el futuro se usan)
+.env
+.env.local
