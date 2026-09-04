@@ -58,6 +58,16 @@
     });
   }
 
+  /* ---------- Volver arriba ---------- */
+  var toTop = document.querySelector(".to-top");
+  if (toTop) {
+    toTop.addEventListener("click", function (e) {
+      e.preventDefault();
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    });
+  }
+
   /* ---------- Formulario de contacto (validación básica) ---------- */
   var form = document.getElementById("contactForm");
   var note = document.getElementById("formNote");
